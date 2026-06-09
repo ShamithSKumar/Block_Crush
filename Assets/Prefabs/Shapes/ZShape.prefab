@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -1850110729437556181}
   - component: {fileID: 360295882130571043}
   m_Layer: 0
-  m_Name: ZShape
+  m_Name: SShape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7955875844090660062, guid: f80e91f0986457f458bb2baf5e124c4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7955875844090660062, guid: f80e91f0986457f458bb2baf5e124c4f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7955875844090660062, guid: f80e91f0986457f458bb2baf5e124c4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7955875844090660062, guid: f80e91f0986457f458bb2baf5e124c4f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -215,7 +215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7955875844090660062, guid: f80e91f0986457f458bb2baf5e124c4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7955875844090660062, guid: f80e91f0986457f458bb2baf5e124c4f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -277,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7955875844090660062, guid: f80e91f0986457f458bb2baf5e124c4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7955875844090660062, guid: f80e91f0986457f458bb2baf5e124c4f, type: 3}
       propertyPath: m_LocalPosition.y
