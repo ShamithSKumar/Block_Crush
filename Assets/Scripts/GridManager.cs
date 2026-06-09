@@ -43,6 +43,8 @@ public class GridManager : MonoBehaviour
 
     public void CheckForCompletedRows()
     {
+        int clearedRows = 0;
+
         for (int y = 0; y < GameConfig.GridHeight; y++)
         {
             bool rowComplete = true;
@@ -61,8 +63,14 @@ public class GridManager : MonoBehaviour
                 DeleteRow(y);
                 MoveRowsAboveDown(y);
 
+                clearedRows++;
                 y--;
             }
+        }
+
+        if (clearedRows > 0)
+        {
+            ScoreManager.Instance.AddScore(clearedRows * 100);
         }
     }
 
