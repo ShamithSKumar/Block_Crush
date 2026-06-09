@@ -8,6 +8,10 @@ public class FallingBlock : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
         timer += Time.deltaTime;
 
         HandleInput();
@@ -61,6 +65,8 @@ public class FallingBlock : MonoBehaviour
             transform.position += Vector3.up;
 
             GridManager.Instance.LockShape(transform);
+
+            GridManager.Instance.CheckForCompletedRows();
 
             enabled = false;
 
