@@ -20,10 +20,18 @@ public class ShapeSpawner : MonoBehaviour
     {
         int randomIndex = Random.Range(0, shapePrefabs.Length);
 
-        Instantiate(
-            shapePrefabs[randomIndex],
-            new Vector3(4, 18, 0),
-            Quaternion.identity
-        );
+        GameObject shape =
+            Instantiate(
+                shapePrefabs[randomIndex],
+                new Vector3(4, 18, 0),
+                Quaternion.identity
+            );
+
+        if (!GridManager.Instance.IsValidPosition(shape.transform))
+        {
+            Destroy(shape);
+
+            GameManager.Instance.GameOver();
+        }
     }
 }
