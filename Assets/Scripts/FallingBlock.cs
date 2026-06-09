@@ -16,7 +16,7 @@ public class FallingBlock : MonoBehaviour
 
         HandleInput();
 
-        if (timer >= fallInterval)
+        if (timer >= LevelManager.Instance.GetFallInterval())
         {
             MoveDown();
             timer = 0f;

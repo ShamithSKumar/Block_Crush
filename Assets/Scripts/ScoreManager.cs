@@ -15,6 +15,11 @@ public class ScoreManager : MonoBehaviour
     {
         Score += points;
 
-        Debug.Log("Score : " + Score);
+        LevelManager.Instance.UpdateLevel(Score);
+
+        Debug.Log(
+            "Score : " + Score +
+            " Level : " + LevelManager.Instance.CurrentLevel
+        );
     }
 }
