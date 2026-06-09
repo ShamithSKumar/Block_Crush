@@ -8,6 +8,10 @@ public class FallingBlock : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
         timer += Time.deltaTime;
 
         HandleInput();
