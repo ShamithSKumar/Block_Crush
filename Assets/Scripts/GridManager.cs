@@ -40,4 +40,60 @@ public class GridManager : MonoBehaviour
             }
         }
     }
+
+    public void CheckForCompletedRows()
+    {
+        for (int y = 0; y < GameConfig.GridHeight; y++)
+        {
+            bool rowComplete = true;
+
+            for (int x = 0; x < GameConfig.GridWidth; x++)
+            {
+                if (grid[x, y] == null)
+                {
+                    rowComplete = false;
+                    break;
+                }
+            }
+
+            if (rowComplete)
+            {
+                DeleteRow(y);
+                MoveRowsAboveDown(y);
+
+                y--;
+            }
+        }
+    }
+
+    private void DeleteRow(int row)
+    {
+        for (int x = 0; x < GameConfig.GridWidth; x++)
+        {
+            Destroy(grid[x, row].gameObject);
+            grid[x, row] = null;
+        }
+    }
+
+    private void MoveRowDown(int row)
+    {
+        for (int x = 0; x < GameConfig.GridWidth; x++)
+        {
+            if (grid[x, row] != null)
+            {
+                grid[x, row - 1] = grid[x, row];
+                grid[x, row] = null;
+
+                grid[x, row - 1].position += Vector3.down;
+            }
+        }
+    }
+
+    private void MoveRowsAboveDown(int row)
+    {
+        for (int y = row + 1; y < GameConfig.GridHeight; y++)
+        {
+            MoveRowDown(y);
+        }
+    }
 }

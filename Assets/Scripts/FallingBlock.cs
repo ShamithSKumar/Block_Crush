@@ -62,6 +62,8 @@ public class FallingBlock : MonoBehaviour
 
             GridManager.Instance.LockShape(transform);
 
+            GridManager.Instance.CheckForCompletedRows();
+
             enabled = false;
 
             ShapeSpawner.Instance.SpawnShape();
